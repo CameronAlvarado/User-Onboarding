@@ -29,23 +29,19 @@
   align-items: center;
 }
 
+.Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .field {
   margin: 10px;
 }
 
 .error {
-  margin: 0;
-  position: absolute;
+  margin: 0px;
   color: fushia;
-}
-
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
 }
 
 @keyframes App-logo-spin {

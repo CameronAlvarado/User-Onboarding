@@ -1,21 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
-import { Form, Field, withFormik, Formik } from "formik";
+import { Form, Field, withFormik } from "formik";
 import * as Yup from "yup";
 
 const UserForm = ({ errors, touched, values, status }) => {
   const [users, setUsers] = useState([]);
-  console.log("this is touched", touched);
+  // console.log("this is touched", touched);
   useEffect(() => {
     if (status) {
       setUsers([...users, status]);
     }
-  }, [users, status]);
+  }, [status]);
 
   return (
     <div className="Form">
         <h1>User Form 1.5</h1>
-        <Formik>
             <Form className="Form-at">
               <Field 
                 className="field" 
@@ -48,16 +47,24 @@ const UserForm = ({ errors, touched, values, status }) => {
               className="checkbox-container">
                 I Agree to the Terms of Services
                 <Field
-                  className="field" 
+                  className="field"
                   type="checkbox"
                   name="terms"
-                  checked={values.vaccinations}
+                  checked={values.terms}
                 />
                 <span className="checkmark" />
               </label>
               <button className="field" type="submit">Submit!</button>
             </Form>
-          </Formik>
+
+            {users.map(user => (
+              <ul className="ul-class" key={user.id}>
+                <li>Name: {user.name}</li>
+                <li>Email: {user.email}</li>
+                <li>Password: {user.password}</li>
+              </ul>
+            ))}
+
     </div>
   );
 }
@@ -74,9 +81,9 @@ const FormikUserForm = withFormik({
   },
 
   validationSchema: Yup.object().shape({
-    name: Yup.string().required("This field is required"),
-    email: Yup.string().required("This field is required"),
-    password: Yup.string().required("This field is required")
+    name: Yup.string().required("Name is required"),
+    email: Yup.string().required("Email is required"),
+    password: Yup.string().required("Password is required")
   }),
 
   handleSubmit(values, { setStatus }) {
