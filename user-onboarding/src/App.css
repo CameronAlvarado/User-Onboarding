@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .App-logo {
@@ -30,18 +32,37 @@
 }
 
 .Form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+background-color: rgb(201, 201, 201);
+padding: 10px;
 }
 
 .field {
   margin: 10px;
 }
 
+.submit {
+  margin: 10px;
+}
+
+.submit:hover {
+  margin: 10px;
+  color: white;
+  background-color: black;
+  font-weight: bold;
+}
+
+.password {
+  -webkit-text-security: disc;
+}
+
+input[type=password] {
+
+}
+
 .error {
   margin: 0px;
-  color: fushia;
+  color: red;
+  font-size: .7rem;
 }
 
 @keyframes App-logo-spin {

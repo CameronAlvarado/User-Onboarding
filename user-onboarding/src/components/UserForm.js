@@ -4,8 +4,9 @@ import { Form, Field, withFormik } from "formik";
 import * as Yup from "yup";
 
 const UserForm = ({ errors, touched, values, status }) => {
+  // Set up a state property called users that is initialized with an empty array
   const [users, setUsers] = useState([]);
-  // console.log("this is touched", touched);
+  // Every time you make a POST request, and get that new user data back, update your users state with the new user added to the array
   useEffect(() => {
     if (status) {
       setUsers([...users, status]);
@@ -54,14 +55,14 @@ const UserForm = ({ errors, touched, values, status }) => {
                 />
                 <span className="checkmark" />
               </label>
-              <button className="field" type="submit">Submit!</button>
+              <button className="submit" type="submit">Submit!</button>
             </Form>
 
             {users.map(user => (
               <ul className="ul-class" key={user.id}>
                 <li>Name: {user.name}</li>
                 <li>Email: {user.email}</li>
-                <li>Password: {user.password}</li>
+                <li>Password: <span className="password" >{user.password}</span></li>
               </ul>
             ))}
 

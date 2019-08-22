@@ -13,7 +13,11 @@ code {
 }
 
 ul {
-  width: 30%;
   list-style-type: none;
-  margin-left: -45px;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 1px dashed grey;
+  text-align: left;
 }
