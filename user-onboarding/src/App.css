@@ -2,6 +2,7 @@
   text-align: center;
   display: flex;
   justify-content: center;
+  margin-top: 10%;
 }
 
 .App-logo {
@@ -32,8 +33,10 @@
 }
 
 .Form {
-background-color: rgb(201, 201, 201);
-padding: 10px;
+  background: rgb(99,99,99);
+  background: linear-gradient(90deg, rgba(99,99,99,1) 0%, rgba(213,213,213,1) 50%, rgba(99,99,99,1) 100%);
+  padding: 10px;
+  width: 30%
 }
 
 .field {
@@ -55,8 +58,13 @@ padding: 10px;
   -webkit-text-security: disc;
 }
 
-input[type=password] {
+.checkbox-container {
+  border: 1px solid grey;
+  padding: 5px;
+}
 
+.ul-class {
+  
 }
 
 .error {

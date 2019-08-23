@@ -43,10 +43,17 @@ const UserForm = ({ errors, touched, values, status }) => {
                 {touched.password && errors.password && (
                   <p className="error">{errors.password}</p>
                 )}
+
+                <Field component="select" className="field" name="role">
+                  <option>Please Select a Role</option>
+                  <option value="Front-End">Front-End</option>
+                  <option value="Back-End">Back-End</option>
+                  <option value="UX Designer">UX Designer</option>
+                </Field>
                 
                 <label 
               className="checkbox-container">
-                I Agree to the Terms of Services
+                I agree to the Terms of Services
                 <Field
                   className="field"
                   type="checkbox"
@@ -63,6 +70,7 @@ const UserForm = ({ errors, touched, values, status }) => {
                 <li>Name: {user.name}</li>
                 <li>Email: {user.email}</li>
                 <li>Password: <span className="password" >{user.password}</span></li>
+                <li>Role: {user.role}</li>
               </ul>
             ))}
 
