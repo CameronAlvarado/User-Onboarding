@@ -1,0 +1,83 @@
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.Form-at {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Form {
+  background: rgb(99,99,99);
+  background: linear-gradient(90deg, rgba(99,99,99,1) 0%, rgba(213,213,213,1) 50%, rgba(99,99,99,1) 100%);
+  padding: 10px;
+  width: 30%
+}
+
+.field {
+  margin: 10px;
+}
+
+.submit {
+  margin: 10px;
+}
+
+.submit:hover {
+  margin: 10px;
+  color: white;
+  background-color: black;
+  font-weight: bold;
+}
+
+.password {
+  -webkit-text-security: disc;
+}
+
+.checkbox-container {
+  border: 1px solid grey;
+  padding: 5px;
+}
+
+.ul-class {
+  
+}
+
+.error {
+  margin: 0px;
+  color: red;
+  font-size: .7rem;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
